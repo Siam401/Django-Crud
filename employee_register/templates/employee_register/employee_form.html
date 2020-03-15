@@ -8,7 +8,16 @@
 {{ form.mobile|as_crispy_field }}
 {{ form.emp_code|as_crispy_field }}
 {{ form.position|as_crispy_field }}
-<button type="submit" class="btn btn-success btn-block btn-lg"><i class="fas fa-database"></i>
+<div class="row">
+        <div class="col-md-8">
+            <button type="submit" class="btn btn-success btn-block btn-lg"><i class="fas fa-database"></i>
                 Submit</button>
+        </div>
+        <div class="col-md-4">
+            <a href="{% url 'employee_list' %}" class="btn btn-secondary btn-block btn-lg">
+                <i class="fas fa-stream"></i> Back to list
+            </a>
+        </div>
+    </div>
 </form>
 {% endblock content %}
